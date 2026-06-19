@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVED - Autonomous Hospital Bed Brochure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: white;
+        }
+
+        .page {
+            page-break-after: always;
+            width: 100%;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            text-align: center;
+            padding: 2in 0.5in;
+            background: linear-gradient(135deg, #1D3557 0%, #0a0a0a 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 10in;
+        }
+
+        .cover-page h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.5in;
+            font-weight: bold;
+        }
+
+        .cover-page .tagline {
+            font-size: 1.5em;
+            margin-bottom: 1in;
+            opacity: 0.9;
+        }
+
+        .cover-page .subtitle {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        /* Sections */
+        h2 {
+            color: #1D3557;
+            font-size: 2em;
+            margin: 0.5in 0 0.3in 0;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 0.2in;
+        }
+
+        h3 {
+            color: #1D3557;
+            font-size: 1.3em;
+            margin: 0.3in 0 0.15in 0;
+        }
+
+        p {
+            margin-bottom: 0.2in;
+            font-size: 0.95em;
+        }
+
+        .highlight-box {
+            background: #f0f8ff;
+            border-left: 4px solid #047857;
+            padding: 0.3in;
+            margin: 0.3in 0;
+            border-radius: 0.1in;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3in;
+            page-break-inside: avoid;
+        }
+
+        .stat-box {
+            background: #F5F5F5;
+            padding: 0.3in;
+            text-align: center;
+            border-radius: 0.1in;
+            page-break-inside: avoid;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #047857;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 0.1in;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            padding: 0.1in 0 0.1in 0.25in;
+            position: relative;
+            font-size: 0.95em;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #047857;
+            font-weight: bold;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.2in 0;
+            font-size: 0.85em;
+        }
+
+        .comparison-table th {
+            background: #1D3557;
+            color: white;
+            padding: 0.15in;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 0.15in;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .moved-highlight {
+            background: #fffacd;
+            font-weight: 600;
+        }
+
+        .key-points {
+            background: #e8f5e9;
+            padding: 0.3in;
+            border-radius: 0.1in;
+            margin: 0.2in 0;
+            font-size: 0.95em;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #1D3557 0%, #0a4a6e 100%);
+            color: white;
+            padding: 0.4in;
+            text-align: center;
+            border-radius: 0.1in;
+            margin-top: 0.5in;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 0.3in;
+            border-top: 1px solid #ddd;
+            padding-top: 0.2in;
+        }
+
+        @media print {
+            body { margin: 0; padding: 0; }
+            .page { margin: 0; page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER PAGE -->
+    <div class="page cover-page">
+        <h1>MOVED</h1>
+        <p class="tagline">Autonomous Hospital Bed System</p>
+        <p class="subtitle">The Future of Hospital Mobility</p>
+        <p style="margin-top: 1in; font-size: 1em;">Revolutionizing Patient Transport with AI-Powered Autonomy</p>
+    </div>
+
+    <!-- PAGE 1: PROBLEM & OPPORTUNITY -->
+    <div class="page page-break">
+        <h2>The Hospital Mobility Crisis</h2>
+
+        <div class="two-column">
+            <div class="stat-box">
+                <div class="stat-number">35-45 min</div>
+                <div class="stat-label">Patient Transport Wait Time</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">12%</div>
+                <div class="stat-label">Annual Staff Injury Rate</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">800,000</div>
+                <div class="stat-label">Hospital-Acquired Falls Annually</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1.7M</div>
+                <div class="stat-label">Healthcare-Acquired Infections</div>
+            </div>
+        </div>
+
+        <h3>Current Challenges</h3>
+        <ul class="feature-list">
+            <li>Manual bed transport delays critical procedures</li>
+            <li>High physical demands on nursing staff</li>
+            <li>Patient safety risks during manual handling</li>
+            <li>Inadequate bed sanitization between patients</li>
+            <li>$15,000+ annual cost per hospital bed</li>
+            <li>78% nurse burnout from manual tasks</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>The Solution:</strong> MOVED eliminates manual labor while maintaining required clinical oversight, reducing injuries and improving patient safety.
+        </div>
+    </div>
+
+    <!-- PAGE 2: SOLUTION & KEY FEATURES -->
+    <div class="page page-break">
+        <h2>MOVED Solution</h2>
+
+        <p>MOVED is the first fully autonomous hospital bed system powered by Claude AI, combining intelligent autonomous navigation with advanced safety systems and infection control technology.</p>
+
+        <h3>Key Features</h3>
+        <ul class="feature-list">
+            <li>Autonomous multi-floor navigation with elevator compatibility</li>
+            <li>Claude AI-powered decision making and voice control</li>
+            <li>Advanced LiDAR sensors (16+ feet obstacle detection)</li>
+            <li>Real-time patient vital signs monitoring</li>
+            <li>UV-C automated sanitization (15 min cycle)</li>
+            <li>EHR system integration</li>
+            <li>HIPAA-compliant AES-256 encryption</li>
+            <li>15+ hour battery life</li>
+        </ul>
+
+        <h3>Impact Metrics</h3>
+        <div class="two-column">
+            <div class="stat-box">
+                <div class="stat-number">3.2 min</div>
+                <div class="stat-label">Transport Time</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">42%</div>
+                <div class="stat-label">Labor Reduction</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">87%</div>
+                <div class="stat-label">Fall Prevention</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">94%</div>
+                <div class="stat-label">Infection Control</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: CLINICAL VALIDATION -->
+    <div class="page page-break">
+        <h2>Clinical Trial Results</h2>
+
+        <div class="highlight-box">
+            <strong>Safety Record:</strong> 93% safety rate with 99% confidence interval across 3,240 patient transports in 8 hospital trial sites
+        </div>
+
+        <h3>Trial Overview</h3>
+        <div class="two-column">
+            <div class="stat-box">
+                <div class="stat-number">32</div>
+                <div class="stat-label">Trial Units</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">850</div>
+                <div class="stat-label">Patients</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">156</div>
+                <div class="stat-label">Staff Trained</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">3,240</div>
+                <div class="stat-label">Safe Transports</div>
+            </div>
+        </div>
+
+        <h3>Outcomes</h3>
+        <ul class="feature-list">
+            <li>93% Safety Record - 99% confidence interval</li>
+            <li>87% Fall Prevention Success</li>
+            <li>94% Infection Control Efficacy</li>
+            <li>91% Staff Approval Rating</li>
+            <li>98.6% System Uptime</li>
+            <li>71% Reduction in Staff Injuries</li>
+        </ul>
+
+        <div class="key-points">
+            <strong>Early Adopters (Deployed):</strong> NJ Hospital Network (Morristown, Princeton, JFK Edison), CHOP, and NYC Health + Hospitals validating market demand
+        </div>
+    </div>
+
+    <!-- PAGE 4: BUSINESS OPPORTUNITY -->
+    <div class="page page-break">
+        <h2>Market Opportunity</h2>
+
+        <div class="two-column">
+            <div class="stat-box">
+                <div class="stat-number">$8.2B</div>
+                <div class="stat-label">Total Market Size</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">6.2%</div>
+                <div class="stat-label">Annual Growth Rate</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">$16.4M</div>
+                <div class="stat-label">Pre-Orders Secured</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">193</div>
+                <div class="stat-label">Units Pre-Ordered</div>
+            </div>
+        </div>
+
+        <h3>Pricing Strategy</h3>
+        <div class="two-column">
+            <div class="stat-box">
+                <div class="stat-number">$65,435</div>
+                <div class="stat-label">Per Unit Cost</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">$85,000</div>
+                <div class="stat-label">Full Investment (with installation)</div>
+            </div>
+        </div>
+
+        <h3>ROI for Hospitals</h3>
+        <ul class="feature-list">
+            <li>Break-even: 18-24 months</li>
+            <li>Annual savings: $2.8M per 100-bed facility</li>
+            <li>5-year ROI: 3.2x</li>
+            <li>Labor cost reduction: 42%</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>Competitive Advantage:</strong> 40% less expensive than premium competitors with superior autonomous capabilities
+        </div>
+    </div>
+
+    <!-- PAGE 5: PARTNERSHIP & EXECUTION -->
+    <div class="page page-break">
+        <h2>Strategic Partnerships</h2>
+
+        <h3>Co-Founders & Global Leadership</h3>
+        <p><strong>Maharshi Patel</strong> | Co-Founder, Senior Mechatronics Engineer, Stryker Corporation<br>
+        <span style="font-size: 0.9em; color: #047857; font-weight: 500;">Mechanical Systems, Sensor Integration, Vision Tracking</span></p>
+
+        <p style="margin-top: 0.15in;"><strong>Thomas Czukoski</strong> | Co-Founder, Senior Software Engineer, Stryker Corporation<br>
+        <span style="font-size: 0.9em; color: #047857; font-weight: 500;">Firmware, Control Systems, AI Decision-Making</span></p>
+
+        <p style="margin-top: 0.15in;"><strong>Jin-Ho Park</strong> | Co-Founder, Chief Engineer, OGGMA Corporation<br>
+        <span style="font-size: 0.9em; color: #047857; font-weight: 500;">Base Platform Architecture & Manufacturing</span></p>
+
+        <p style="margin-top: 0.15in;"><strong>Development Team (10 Engineers - New Jersey):</strong> Mechanical design, AI/software architecture, embedded systems, clinical integration, manufacturing & QA</p>
+
+        <p style="margin-top: 0.15in;"><strong>Manufacturing Team (12 Engineers - OGGMA, South Korea):</strong> Advanced manufacturing, quality assurance, production management, technical coordination</p>
+
+        <p style="margin-top: 0.15in;"><strong>Total: 22 Engineers + 3 Co-Founders</strong></p>
+
+        <p style="font-size: 0.9em; color: #666; margin-top: 0.1in;">2 PhDs | 8 Published Patents | Global team across USA and South Korea</p>
+
+        <h3>Sales & Distribution</h3>
+        <div class="two-column">
+            <div>
+                <h3 style="font-size: 1.1em;">🏢 Stryker Corporation</h3>
+                <p style="font-size: 0.9em;">US & Canada sales and distribution</p>
+            </div>
+            <div>
+                <h3 style="font-size: 1.1em;">🌏 OGGMA</h3>
+                <p style="font-size: 0.9em;">Asia-Pacific operations and manufacturing</p>
+            </div>
+        </div>
+
+        <h3>Manufacturing & Capacity</h3>
+        <ul class="feature-list">
+            <li>5,000 annual production capacity (scalable to 10,000+)</li>
+            <li>2-week build-to-delivery time</li>
+            <li>6 strategic distribution centers worldwide</li>
+            <li>ISO 13485 and CE Mark certified</li>
+        </ul>
+
+        <h3>Regulatory Timeline</h3>
+        <ul class="feature-list">
+            <li>FDA 510(k) clearance: Expected Q3 2026</li>
+            <li>Commercial launch: Q3 2026</li>
+            <li>Market expansion: Q4 2026</li>
+        </ul>
+    </div>
+
+    <!-- PAGE 6: COMPETITIVE POSITION -->
+    <div class="page page-break">
+        <h2>Market Comparison</h2>
+
+        <table class="comparison-table">
+            <tr>
+                <th>Feature</th>
+                <th class="moved-highlight">MOVED</th>
+                <th>Traditional</th>
+                <th>Basic Smart</th>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td class="moved-highlight">$65,435</td>
+                <td>$3-5K</td>
+                <td>$8-12K</td>
+            </tr>
+            <tr>
+                <td>Autonomous Navigation</td>
+                <td class="moved-highlight">✓ Full</td>
+                <td>✗</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>AI Assistant</td>
+                <td class="moved-highlight">✓ Claude AI</td>
+                <td>✗</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>Voice Control</td>
+                <td class="moved-highlight">✓</td>
+                <td>✗</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>UV-C Sanitization</td>
+                <td class="moved-highlight">✓</td>
+                <td>✗</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>ROI Timeline</td>
+                <td class="moved-highlight">18-24 mo</td>
+                <td>N/A</td>
+                <td>3-4 years</td>
+            </tr>
+            <tr>
+                <td>Value Score</td>
+                <td class="moved-highlight">9.5/10</td>
+                <td>3/10</td>
+                <td>5/10</td>
+            </tr>
+        </table>
+
+        <div class="highlight-box">
+            <strong>Bottom Line:</strong> MOVED delivers superior technology and features at competitive pricing with fastest ROI in the market.
+        </div>
+    </div>
+
+    <!-- PAGE 7: STAFF & IMPACT -->
+    <div class="page page-break">
+        <h2>MOVED Augments Staff - Doesn't Replace Them</h2>
+
+        <div class="highlight-box">
+            <strong>Regulatory Requirement:</strong> Government and hospital safety regulations require trained staff supervision when patients are being transported. MOVED enhances staff capability while maintaining compliance.
+        </div>
+
+        <h3>What Changes</h3>
+        <div class="two-column">
+            <div>
+                <h3 style="font-size: 1em; color: #d32f2f;">Without MOVED</h3>
+                <ul style="list-style: none; padding-left: 0; font-size: 0.9em;">
+                    <li>❌ Manual bed pushing</li>
+                    <li>❌ Physical strain</li>
+                    <li>❌ Injury risk</li>
+                    <li>❌ Limited patient time</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="font-size: 1em; color: #2e7d32;">With MOVED</h3>
+                <ul style="list-style: none; padding-left: 0; font-size: 0.9em;">
+                    <li>✓ Monitor vitals</li>
+                    <li>✓ Assess condition</li>
+                    <li>✓ Provide care</li>
+                    <li>✓ Clinical focus</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Staff Impact</h3>
+        <div class="two-column">
+            <div class="stat-box">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Jobs Eliminated</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">+91%</div>
+                <div class="stat-label">Staff Satisfaction</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">71%</div>
+                <div class="stat-label">Injury Reduction</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">↑</div>
+                <div class="stat-label">Nurse Retention</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 8: CONTACT & SUMMARY -->
+    <div class="page page-break">
+        <h2>Why Choose MOVED</h2>
+
+        <h3>Five Reasons Hospitals Are Pre-Ordering</h3>
+        <ol style="padding-left: 0.3in; font-size: 0.95em;">
+            <li style="margin-bottom: 0.1in;"><strong>Proven Safety:</strong> 93% safety record across 3,240 patient transports with 99% confidence interval</li>
+            <li style="margin-bottom: 0.1in;"><strong>Fastest ROI:</strong> Break-even in 18-24 months vs competitors at 2.5-4 years</li>
+            <li style="margin-bottom: 0.1in;"><strong>Unique Technology:</strong> Only bed with Claude AI and full autonomous multi-floor navigation</li>
+            <li style="margin-bottom: 0.1in;"><strong>Staff Support:</strong> Reduces injuries by 71% while improving patient care quality</li>
+            <li style="margin-bottom: 0.1in;"><strong>Market Leader:</strong> Early adopter partnerships across NJ Network, CHOP, NYC Health+, Mayo, Johns Hopkins, and Stanford</li>
+        </ol>
+
+        <div class="key-points" style="margin-top: 0.4in;">
+            <strong>193 units pre-ordered ($16.4M)</strong> – Healthcare facilities ready to deploy immediately upon FDA clearance
+        </div>
+
+        <h3>Timeline to Market</h3>
+        <ul class="feature-list" style="font-size: 0.9em;">
+            <li>Q2 2026: FDA Clearance expected</li>
+            <li>Q3 2026: Commercial launch & pre-order fulfillment</li>
+            <li>Q4 2026: Geographic expansion to 5+ new countries</li>
+            <li>2027: MOVED 2.0 development begins</li>
+            <li>2028: Target 15% North American market share</li>
+        </ul>
+
+        <div class="contact-info">
+            <p style="margin: 0; font-size: 1em;"><strong>MOVED Autonomous Hospital Bed System</strong></p>
+            <p style="margin: 0.1in 0 0 0; font-size: 0.9em;">Revolutionizing Hospital Mobility with AI-Powered Autonomy</p>
+            <p style="margin: 0.2in 0 0 0; font-size: 0.85em;">Development Team: New Jersey | Partnerships: Stryker Corporation & OGGMA</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 MOVED Autonomous Hospital Bed System | The Future of Hospital Mobility</p>
+            <p>Print this brochure to PDF for distribution to hospital decision-makers and investors</p>
+        </div>
+    </div>
+
+</body>
+</html>
