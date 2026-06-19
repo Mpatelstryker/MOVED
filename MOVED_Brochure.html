@@ -13,7 +13,7 @@
 
         @page {
             size: letter;
-            margin: 0.5in;
+            margin: 0.4in;
         }
 
         body {
@@ -28,7 +28,7 @@
             width: 100%;
             max-width: 8.5in;
             margin: 0 auto;
-            padding: 0.5in;
+            padding: 0.4in;
             background: white;
         }
 
@@ -68,24 +68,25 @@
         /* Sections */
         h2 {
             color: #1D3557;
-            font-size: 2em;
-            margin: 0.5in 0 0.3in 0;
-            border-bottom: 3px solid #FFD700;
-            padding-bottom: 0.2in;
-            page-break-before: always;
+            font-size: 1.4em;
+            margin: 0.25in 0 0.15in 0;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 0.1in;
+            page-break-before: avoid;
+            page-break-after: avoid;
         }
 
         h3 {
             color: #1D3557;
-            font-size: 1.3em;
-            margin: 0.3in 0 0.15in 0;
+            font-size: 1em;
+            margin: 0.15in 0 0.1in 0;
             page-break-before: avoid;
             page-break-after: avoid;
         }
 
         p {
-            margin-bottom: 0.2in;
-            font-size: 0.95em;
+            margin-bottom: 0.1in;
+            font-size: 0.85em;
             page-break-inside: avoid;
         }
 
@@ -95,38 +96,39 @@
 
         .highlight-box {
             background: #f0f8ff;
-            border-left: 4px solid #047857;
-            padding: 0.3in;
-            margin: 0.3in 0;
-            border-radius: 0.1in;
+            border-left: 3px solid #047857;
+            padding: 0.15in;
+            margin: 0.1in 0;
+            border-radius: 0.05in;
+            font-size: 0.85em;
             page-break-inside: avoid;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0.3in;
+            gap: 0.15in;
             page-break-inside: avoid;
         }
 
         .stat-box {
             background: #F5F5F5;
-            padding: 0.3in;
+            padding: 0.15in;
             text-align: center;
-            border-radius: 0.1in;
+            border-radius: 0.05in;
             page-break-inside: avoid;
         }
 
         .stat-number {
-            font-size: 1.8em;
+            font-size: 1.3em;
             font-weight: bold;
             color: #047857;
         }
 
         .stat-label {
-            font-size: 0.9em;
+            font-size: 0.75em;
             color: #666;
-            margin-top: 0.1in;
+            margin-top: 0.05in;
         }
 
         .feature-list {
@@ -136,9 +138,9 @@
         }
 
         .feature-list li {
-            padding: 0.1in 0 0.1in 0.25in;
+            padding: 0.05in 0 0.05in 0.2in;
             position: relative;
-            font-size: 0.95em;
+            font-size: 0.8em;
         }
 
         .feature-list li:before {
@@ -152,20 +154,20 @@
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 0.2in 0;
-            font-size: 0.85em;
+            margin: 0.1in 0;
+            font-size: 0.75em;
             page-break-inside: avoid;
         }
 
         .comparison-table th {
             background: #1D3557;
             color: white;
-            padding: 0.15in;
+            padding: 0.08in;
             text-align: left;
         }
 
         .comparison-table td {
-            padding: 0.15in;
+            padding: 0.08in;
             border-bottom: 1px solid #ddd;
         }
 
@@ -180,10 +182,10 @@
 
         .key-points {
             background: #e8f5e9;
-            padding: 0.3in;
-            border-radius: 0.1in;
-            margin: 0.2in 0;
-            font-size: 0.95em;
+            padding: 0.15in;
+            border-radius: 0.05in;
+            margin: 0.1in 0;
+            font-size: 0.8em;
             page-break-inside: avoid;
         }
 
